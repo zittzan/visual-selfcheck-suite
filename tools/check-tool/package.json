@@ -1,0 +1,51 @@
+{
+  "name": "model-check-tool",
+  "version": "1.0.2",
+  "description": "3Dモデリングセルフチェックツール",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64",
+    "make-zip": "powershell -Command \"Compress-Archive -Path dist/win-unpacked/* -DestinationPath dist/ModelCheckTool-win-x64.zip -Force; Write-Host 'Done: dist/ModelCheckTool-win-x64.zip'\""
+  },
+  "devDependencies": {
+    "electron": "^42.2.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.ricasso.model-check-tool",
+    "productName": "Model Check Tool",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "csv-parser.js",
+      "app.js",
+      "main.js",
+      "vendor/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

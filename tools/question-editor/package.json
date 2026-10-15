@@ -1,0 +1,39 @@
+{
+  "name": "question-editor",
+  "version": "0.1.0",
+  "description": "Model Check Tool 用 設問編集エディタ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64",
+    "make-zip": "powershell -Command \"Compress-Archive -Path dist/win-unpacked/* -DestinationPath dist/QuestionEditor-win-x64.zip -Force; Write-Host 'Done: dist/QuestionEditor-win-x64.zip'\""
+  },
+  "devDependencies": {
+    "electron": "^42.2.0",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+    "appId": "com.ricasso.question-editor",
+    "productName": "Question Editor",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "style.css",
+      "app.js",
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "vendor/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "zip",
+          "arch": ["x64"]
+        }
+      ]
+    }
+  }
+}

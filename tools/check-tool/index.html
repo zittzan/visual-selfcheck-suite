@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src blob: data:; connect-src https://fonts.googleapis.com https://fonts.gstatic.com;">
+  <title>Model Check Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mct-good:        #10B981;
+      --mct-good-hover:  #14C28C;
+      --mct-good-press:  #0E9E6E;
+      --mct-bad:         #E11D48;
+      --mct-bad-hover:   #EB3A60;
+      --mct-bad-press:   #C2173D;
+      --mct-neutral:     #ECEEF1;
+      --mct-neutral-2:   #DDE0E5;
+      --mct-neutral-3:   #C5C9D0;
+      --mct-ink:         #0F172A;
+      --mct-ink-2:       #475569;
+      --mct-ink-3:       #94A3B8;
+      --mct-surface:     #FFFFFF;
+      --mct-surface-2:   #F8FAFC;
+      --mct-link:        #2563EB;
+      --fg:              var(--mct-ink);
+      --fg-2:            var(--mct-ink-2);
+      --bg:              var(--mct-surface);
+      --font-sans:       'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --font-weight-body:    400;
+      --font-weight-medium:  500;
+      --font-weight-display: 700;
+      --font-weight-hero:    900;
+      --fs-hero:    56px;
+      --fs-display: 30px;
+      --fs-button:  24px;
+      --fs-meta:    24px;
+      --fs-body:    15px;
+      --fs-label:   13px;
+      --tracking-tight: -0.01em;
+      --tracking-mini:   0.06em;
+      --lh-tight:  1;
+      --lh-snug:   1.2;
+      --lh-body:   1.6;
+      --t-fast: 80ms;
+      --t-base: 120ms;
+      --ease:   cubic-bezier(.2, 0, 0, 1);
+    }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: var(--font-sans);
+      font-weight: var(--font-weight-body);
+      color: var(--fg);
+      background: #1a1a1a;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; box-sizing: border-box; }
+    .mct-stage {
+      position: relative;
+      min-width: 960px; min-height: 720px;
+      width: calc(100vw - 48px); height: calc(100vh - 48px);
+      background: var(--mct-surface);
+      box-shadow: 0 12px 60px rgba(0,0,0,.4);
+      overflow: hidden;
+    }
+    button { font-family: var(--font-sans); }
+    .mct-stage *::-webkit-scrollbar { width: 6px; height: 6px; }
+    .mct-stage *::-webkit-scrollbar-thumb { background: #999; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="./vendor/react.production.min.js"></script>
+  <script src="./vendor/react-dom.production.min.js"></script>
+
+  <script src="./csv-parser.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
