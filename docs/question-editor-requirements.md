@@ -159,4 +159,4 @@ Title,Category,Description,Note,Good_Image,Bad_Image,URL
 
 ---
 
-*作成日: 2026-05-28 / 対象プロジェクト: GeneralWorkTools / tools/check-tool*
+*作成日: 2026-05-28 / 対象: tools/check-tool*
