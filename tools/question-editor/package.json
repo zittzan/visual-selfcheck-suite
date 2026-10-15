@@ -9,8 +9,8 @@
     "make-zip": "powershell -Command \"Compress-Archive -Path dist/win-unpacked/* -DestinationPath dist/QuestionEditor-win-x64.zip -Force; Write-Host 'Done: dist/QuestionEditor-win-x64.zip'\""
   },
   "devDependencies": {
-    "electron": "^42.2.0",
-    "electron-builder": "^26.8.1"
+    "electron": "^42.11.14",
+    "electron-builder": "^26.17.0"
   },
   "build": {
     "appId": "com.ricasso.question-editor",
@@ -31,7 +31,9 @@
       "target": [
         {
           "target": "zip",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     }
