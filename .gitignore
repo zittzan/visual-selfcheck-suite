@@ -42,9 +42,15 @@ logs/
 *.bak
 ~$*
 
-# Claude Code (local machine settings)
+# Claude Code（個人の設定と作業用）
 .claude/settings.local.json
 .claude/worktrees/
+CLAUDE.local.md
 
-# TAKT ワークフロー実行ログ（AIエージェントの作業ログ）
-.takt/runs/
+# TAKT（個人で使う AI ワークフローツール。実行ログと設定）
+.takt/
+
+# 設問データ（実データを含みうるので共有しない）
+SampleData/
+checklist.csv
+project.json
