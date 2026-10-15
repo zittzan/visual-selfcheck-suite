@@ -1,7 +1,7 @@
 {
   "name": "model-check-tool",
   "version": "1.0.2",
-  "description": "3Dモデリングセルフチェックツール",
+  "description": "参照画像を見比べてセルフチェックするビューワー",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
