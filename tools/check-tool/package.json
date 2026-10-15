@@ -1,6 +1,6 @@
 {
   "name": "model-check-tool",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "参照画像を見比べてセルフチェックするビューワー",
   "main": "main.js",
   "scripts": {

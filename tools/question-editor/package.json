@@ -1,6 +1,6 @@
 {
   "name": "question-editor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Visual SelfCheck 用 設問編集エディタ",
   "main": "main.js",
   "scripts": {

@@ -33,7 +33,7 @@ npm run make-zip   # dist/win-unpacked を PowerShell の Compress-Archive で z
 - `npm install` 後に Electron 本体が入っていないとき（`node_modules/electron/path.txt` が無い）は `node node_modules/electron/install.js` を実行する。npm 12 の環境では、`npm install` のたびにこの状態になった。
 - 依存バージョンを上げた後に `npm install` を忘れ、古い Electron 33 のままビルドした事故が過去にある。ビルド前に `node_modules/electron/package.json` の version が `package.json` の指定（現在 ^42.11.14）と合っているか確かめる。2 つのツールの Electron と electron-builder のバージョンは揃えておく。
 - check-tool の `dist` は zip と NSIS インストーラーの両方を作る。NSIS 側（winCodeSign の展開）は Windows の開発者モードが無いと失敗することがあるが、`dist/win-unpacked/` は生成されるので `make-zip` で配布用 zip を作れる。question-editor の `dist` は zip のみ。
-- バージョンは各 `package.json` の `version` で管理する（check-tool 1.0.2、question-editor 0.1.0）。
+- バージョンは各 `package.json` の `version` で管理する（check-tool 1.1.0、question-editor 0.1.1）。
 
 ## アーキテクチャ
 
