@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 概要
 
-参照画像（Good / Bad 例）を見ながらセルフチェックするための、独立した 2 つの Electron アプリのセット。
+Visual SelfCheck Suite は、参照画像（Good / Bad 例）を見ながらセルフチェックするための、独立した 2 つの Electron アプリのセット。
 
-- `tools/check-tool`（Model Check Tool）: 設問を表示して OK / Skip / BAD を判定するビューワー
+- `tools/check-tool`（Visual SelfCheck）: 設問を表示して OK / Skip / BAD を判定するビューワー
 - `tools/question-editor`（Question Editor）: 設問データ（CSV + 画像）を作って書き出すエディター
 
 データの流れは「エディターが `checklist.csv` + `images/` を書き出す → ビューワーがそのフォルダを読む」の一方向。2 つのアプリはコードもパッケージも共有しておらず、ルートに `package.json` は無い。
@@ -15,7 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - check-tool は最初ブラウザで開く単体 HTML として作り、のちに Electron 化した。3D モデラーが Maya や MotionBuilder の横に並べて使う前提なので、ウィンドウは既定で最前面表示になっている。
 - 設問データは当初 Notion からエクスポートする想定だったが、権限の都合でチーム全員がエクスポートできないと分かり、question-editor を別に作った。要件は `docs/question-editor-requirements.md`。
-- リポジトリ名はアプリの用途を分野に依存せず表すために付けたもので、`productName`、`appId`（`com.ricasso.*`）、配布物のファイル名（`ModelCheckTool-win-x64.zip` など）とは一致しない。配布物の名前は利用者向けに意図的に据え置いているので変えない。
+- ビューワーは分野に依存しない名前にするため、2026-10-15 に Model Check Tool から Visual SelfCheck へ改名した。変えたのは利用者に見える名前（`productName`、ウィンドウと画面のタイトル、配布 zip の名前、ドキュメント）だけ。ディレクトリ名 `tools/check-tool`、npm の `name`（`model-check-tool`）、`appId`（`com.ricasso.model-check-tool`）は旧名のまま据え置いている。特に `appId` はインストーラーが同じアプリかどうかを見分けるのに使うので、変えると既存のインストール版とは別のアプリとして扱われる。
 - 設問データ（CSV、画像、`project.json`）はコミットしない。実データを含みうるため `.gitignore` で `SampleData/`、`checklist.csv`、`project.json` を除外している。手元で試すデータは `SampleData/` に置く。
 
 ## コマンド

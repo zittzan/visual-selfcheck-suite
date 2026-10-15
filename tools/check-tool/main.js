@@ -23,7 +23,7 @@ function createWindow() {
     minWidth: 980,
     minHeight: 759,
     alwaysOnTop: true,
-    title: 'Model Check Tool',
+    title: 'Visual SelfCheck',
     backgroundColor: '#1a1a1a',
     webPreferences: {
       nodeIntegration: false,

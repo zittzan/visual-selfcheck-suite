@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder --win --x64",
-    "make-zip": "powershell -Command \"Compress-Archive -Path dist/win-unpacked/* -DestinationPath dist/ModelCheckTool-win-x64.zip -Force; Write-Host 'Done: dist/ModelCheckTool-win-x64.zip'\""
+    "make-zip": "powershell -Command \"Compress-Archive -Path dist/win-unpacked/* -DestinationPath dist/VisualSelfCheck-win-x64.zip -Force; Write-Host 'Done: dist/VisualSelfCheck-win-x64.zip'\""
   },
   "devDependencies": {
     "electron": "^42.11.14",
@@ -14,7 +14,7 @@
   },
   "build": {
     "appId": "com.ricasso.model-check-tool",
-    "productName": "Model Check Tool",
+    "productName": "Visual SelfCheck",
     "directories": {
       "output": "dist"
     },

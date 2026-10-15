@@ -1,4 +1,4 @@
-# Model Check Tool
+# Visual SelfCheck
 
 3D モデリング作業のセルフチェックを支援するデスクトップアプリケーションです。  
 設問編集ツール（`tools/question-editor`）からエクスポートしたチェックリスト（CSV + 画像）を読み込み、Good / Bad 画像を並べながら設問ごとに OK / Skip / BAD の判定を行います。
@@ -18,7 +18,7 @@
 
 ## 使い方（配布版）
 
-配布された `ModelCheckTool-win-x64.zip` を展開し、`Model Check Tool.exe` をダブルクリックして起動してください。  
+配布された `VisualSelfCheck-win-x64.zip` を展開し、`Visual SelfCheck.exe` をダブルクリックして起動してください。  
 Node.js・Python などの追加インストールは不要です。
 
 ### チェックリストの準備
@@ -74,10 +74,10 @@ npm start
 
 ```bash
 npm run dist      # エラーが表示されても dist/win-unpacked/ は生成されます
-npm run make-zip  # dist/ModelCheckTool-win-x64.zip が完成します
+npm run make-zip  # dist/VisualSelfCheck-win-x64.zip が完成します
 ```
 
-受け取った側は zip を展開して `Model Check Tool.exe` を実行するだけで動作します。
+受け取った側は zip を展開して `Visual SelfCheck.exe` を実行するだけで動作します。
 
 #### インストーラー版（.exe）― Developer Mode が必要
 
@@ -89,7 +89,7 @@ Windows の Developer Mode を有効にしてからビルドしてください�
 npm run dist
 ```
 
-`dist/` フォルダにインストーラー（`Model Check Tool Setup x.x.x.exe`）と zip の両方が生成されます。
+`dist/` フォルダにインストーラー（`Visual SelfCheck Setup x.x.x.exe`）と zip の両方が生成されます。
 
 ---
 

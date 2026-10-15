@@ -1,7 +1,7 @@
 {
   "name": "question-editor",
   "version": "0.1.0",
-  "description": "Model Check Tool 用 設問編集エディタ",
+  "description": "Visual SelfCheck 用 設問編集エディタ",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

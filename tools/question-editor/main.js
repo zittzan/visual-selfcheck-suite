@@ -221,7 +221,7 @@ ipcMain.handle('fs:fileExists', async (_evt, absPath) => {
 // CSV + 画像フォルダのインポート（既存 check-tool フォルダ）
 ipcMain.handle('project:importCsvFolder', async () => {
   const pick = await dialog.showOpenDialog(mainWindow, {
-    title: 'check-tool フォルダを選択',
+    title: 'Visual SelfCheck 用フォルダを選択',
     properties: ['openDirectory'],
   });
   if (pick.canceled || pick.filePaths.length === 0) return null;

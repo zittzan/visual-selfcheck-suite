@@ -162,7 +162,7 @@
     return h('div', { className: 'qe-toolbar' },
       h('button', { className: 'qe-btn', onClick: onNew, title: '新規プロジェクト' }, '新規'),
       h('button', { className: 'qe-btn', onClick: onOpenProject, title: 'project.json を開く' }, '開く'),
-      h('button', { className: 'qe-btn', onClick: onImportCsv, title: '既存 check-tool フォルダから取り込み' }, 'CSV取込'),
+      h('button', { className: 'qe-btn', onClick: onImportCsv, title: '既存の Visual SelfCheck 用フォルダから取り込み' }, 'CSV取込'),
       h('button', { className: 'qe-btn', onClick: onSave, disabled: !dirty && !!projectPath, title: '編集中のデータを project.json に保存（チェックリストとしての出力ではない）' }, '編集データの一時保存'),
       h('button', { className: 'qe-btn qe-btn-primary', onClick: onExport, disabled: questionsCount === 0 }, 'エクスポート'),
       h('span', { className: 'qe-spacer' }),
@@ -770,7 +770,7 @@
       const warns = [];
       // タイトル / カテゴリ未設定
       project.questions.forEach((q, i) => {
-        if (!q.title) warns.push(`設問 #${i + 1}: Title 未設定（check-tool で読み飛ばされるよ）`);
+        if (!q.title) warns.push(`設問 #${i + 1}: Title 未設定（Visual SelfCheck で読み飛ばされるよ）`);
         if (!q.category) warns.push(`設問 #${i + 1} (${q.title || '無題'}): Category 未設定（同上）`);
       });
       // 参照切れ画像

@@ -370,7 +370,7 @@ function Loading({
       color: 'var(--mct-ink)',
       textAlign: 'center'
     }
-  }, "Model Check Tool"), /*#__PURE__*/React.createElement("div", {
+  }, "Visual SelfCheck"), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 16,
       fontWeight: 400,
